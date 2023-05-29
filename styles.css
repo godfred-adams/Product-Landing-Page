@@ -1,0 +1,248 @@
+/* imported font */
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+:root{
+    --icon-color: darkorange;
+    --footer-bgcolor: #ddd;
+    --form-button: #f1c40f;
+    --background-color: #eee;
+    --font-color: #000;
+
+}
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lato', sans-serif, Arial, Helvetica;
+    background-color: var(--background-color);
+}
+/* styling navbar */
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: fixed;
+    top: 0;
+    background-color: var(--background-color );
+    width: 100%;
+}
+.logo img{
+    width: 300px;
+}
+#nav-bar ul li{
+    display: inline-block;
+    padding: 0 55px;
+    list-style-type: none;
+}
+#nav-bar ul li a, footer li a{
+    text-decoration: none;
+    color: var(--font-color);
+}
+/* styling the main page */
+main{
+    margin: 6% auto 0 auto;
+    width: 65%;
+}
+ul li{
+    list-style-type: none;
+}
+/* styling the form */
+h2,form{
+    text-align: center;
+}
+input[type="email"]{
+    padding: 5px;
+    width: 30%;
+    margin: 15px auto 10px auto;
+}
+input[type="submit"]{
+    display: block;
+    margin: 5px auto;
+    padding: 7px 5px 5px 20px;
+    border: none;
+    background-color: var(--form-button);
+    width: 150px;
+    font-weight: bold;
+    font-size: 17px;
+    border-radius: 3px;
+    margin-bottom: 100px;
+}
+input[type="submit"]:hover{
+    cursor: pointer;
+    transition: all 0.3s linear 0.5s;
+    background-color: var(--icon-color);
+}
+/* styling the features section */
+.ft-info{
+    display: flex;
+    width: 100%;
+    margin: 50px auto;
+    align-items: center;
+}
+.icon{
+    font-size: 55px;
+    color: var(--icon-color);
+    width: 20%;
+}
+.description, .description h2, .description-1 h2{
+    text-align: left;
+}
+.description-1{
+    margin-left: -22px;
+}
+.ft-info:last-of-type{
+    margin-bottom: 5rem;
+}
+/* styling the  how-it-works-section */
+#video{
+    display: block;
+    margin: 20px auto;
+    height: 315px;
+    width: 65%;
+}
+/* styling the pricing section */
+#pricing{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 8% 0 0 0;
+}
+.pricing-card{
+    border: 1px solid var(--font-color);
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 2px;
+}
+.card-title{
+    background-color: var(--footer-bgcolor);
+    font-weight: bold;
+    padding: 15px;
+    text-transform: uppercase;
+}
+.price{
+    font-weight: 700;
+    font-size: 20px;
+    padding: 12px;
+}
+.lists li{
+    padding: 5px 0;
+}
+.select-btn{
+    border: none;
+    background-color: var(--form-button);
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: normal;
+    width: 100px;
+    margin-top: 25px;
+    font-size: 1.1rem;
+}
+.select-btn:hover{
+    transition: all 0.3s linear 0.5s;
+    background-color: var(--icon-color);
+    cursor: pointer;
+}
+footer{
+    background-color: var(--footer-bgcolor);
+    width: 64%;
+    margin: 20px auto 0 auto;
+    text-align: right;
+}
+.footer-links ul li{
+    display: inline-block;
+    padding:  10px 25px 5px 0;
+    font-size: 15px;
+}
+footer p{
+    padding: 0 17px 20px 0;
+    font-size: 14.5px;
+}
+@media (max-width: 767px){
+    #header{
+        display: block;
+        text-align: center;        
+    }
+    .logo img{
+        object-fit: cover;
+    }
+    #nav-bar ul li{
+        display: block;
+        padding: 3px 0;
+    }
+    /* main page */
+    main{
+        margin-top: 150px;
+        width: 100%;
+    }
+    input[type="email"]{
+        width: 74%;
+        padding: 5px;
+    }
+    .icon{
+        display: none;
+    }
+    .description-1{
+        margin: 0;
+    }
+    .description h2, .description-1 h2{
+        text-align: center;
+        padding: 2px;
+    }
+    .description, .description-1{
+        text-align: center;
+    }
+    #video{
+        width: 100%;
+    }
+    #pricing{
+        flex-wrap: wrap;
+    }
+    .pricing-card{
+        margin-top: 10px;
+    }
+    .select-btn{
+        font-size: 0.9rem;
+    }
+    footer{
+        width: 100%;
+    }
+}
+@media  only screen and (max-width:768px){
+    #pricing{
+        flex-wrap: wrap;
+    }
+}
+@media(min-width: 768px) and (max-width:1114px){
+    .logo img{
+        width: 200px;
+    }
+    #nav-bar ul li{
+        padding: 0 20px 0 0 ;
+    }
+    main{
+        margin: 15% auto;
+        width: 95%;
+    }
+    input[type="email"]{
+        width: 70%;
+    }
+    .icon{
+        width: 45%;
+    }
+    #video{
+        width: 80%;
+    }
+    .pricing-card{
+        margin: 5px;
+    }
+    .select-btn{
+        font-size: 0.8rem;
+    }
+    footer{
+        width: 100%;
+    }
+}
+
+
